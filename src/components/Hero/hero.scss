@@ -1,0 +1,43 @@
+@import "../../App.scss";
+
+.imgres{
+
+    @include mobile{
+        width: 90%;
+    };
+    
+}
+
+.containerres{
+    @include mobile{
+       margin: auto;
+    };
+
+    h2{
+        @include mobile{
+            margin-left: 20%;
+            font-weight: 600;
+         };
+    }
+
+    h1{
+        @include mobile{
+            margin-left: 6%;
+           
+         };
+    }
+
+
+    .but{
+        @include mobile{
+            margin-left: 15%;
+         };
+    }
+
+    button{
+        @include mobile{
+            width: 45%;
+            margin-left: -4%;
+         };
+    }
+}

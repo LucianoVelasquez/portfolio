@@ -1,0 +1,13 @@
+.hh2{
+    position: absolute;
+    font-size: 32vh;
+     white-space: nowrap;
+    bottom: -50px;
+    /* background-clip: text;
+    color: linear-gradient(90deg, rgba(131, 58, 180, 0.216) 0%, rgba(253, 29, 29, 0.134) 50%, rgba(252, 176, 69, 0.245) 100%); */
+    background: #833AB4;
+    background: linear-gradient(to right, #833ab41b 3%, #fd1d1d1f 50%, #fcb04517 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}

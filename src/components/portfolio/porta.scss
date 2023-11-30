@@ -1,0 +1,59 @@
+@import "../../App.scss";
+
+.c2{
+    @include mobile{
+        flex-direction: column;     
+        gap: 0;
+    }
+    
+   
+}
+.im2{
+    @include mobile{
+        width: 100%;
+        max-height: 300px;    
+    }
+
+    img{
+        @include mobile{
+            
+        }
+    }
+}
+.text1{
+    @include mobile{
+        transform: none !important;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+        gap: 1.4rem;
+    }
+
+    h2{
+        @include mobile{
+         font-size: 38px; 
+        }
+    }
+    p{
+        @include mobile{
+            font-size: 18px; 
+           } 
+    }
+
+    img{
+        @include mobile{
+            margin: auto;
+            height: 26px;
+            width: 26px;
+        } 
+    }
+}
+
+.bar{
+    @include mobile{
+        display: flex;
+        padding-top: calc(99vh - 53px);
+        flex-direction: column-reverse;
+    } 
+}
+
