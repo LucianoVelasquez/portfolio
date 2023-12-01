@@ -1,6 +1,7 @@
+import "./footer.scss"
 const Footer = () => {
   return (
-    <footer className="footer items-center p-4 bg-base-300 text-base-content">
+    <footer className="footer items-center p-4 bg-base-300 text-base-content footer1">
       <aside className="items-center grid-flow-col">
         <svg
           width="36"
