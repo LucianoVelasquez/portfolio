@@ -1,0 +1,7 @@
+@import "../../App.scss";
+
+.footer1{
+    @include mobile{
+        display: none;
+    }
+}
