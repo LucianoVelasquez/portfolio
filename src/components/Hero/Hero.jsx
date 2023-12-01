@@ -36,7 +36,7 @@ const Hero = () => {
         <motion.div className="mr-16 containerres" variants={textVariants} initial="initial" animate="animate">
           <motion.h1 variants={textVariants} className="text-3xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-red-500 to-yellow-300  font-bold tracking-wider">LUCIANO VELASQUEZ</motion.h1>
           <motion.h2 variants={textVariants} className="text-5xl font-bold mt-6 text-start">Full Stack Developer</motion.h2>
-          <motion.h2 variants={textVariants} className="text-4xl font-bold mt-4 ">Orientado al Backend</motion.h2>
+          <motion.h2 variants={textVariants} className="text-4xl font-bold mt-4 ">Backend Developer First</motion.h2>
           <motion.div variants={textVariants} className="but">
             <motion.button  variants={textVariants} className="btn btn-outline btn-primary mt-10 mr-8"><a href="#portafolio">Ver Proyectos</a></motion.button>
             <motion.button  variants={textVariants} className="btn btn-outline btn-primary mt-10"><a href="#contact">Contactame</a></motion.button>
