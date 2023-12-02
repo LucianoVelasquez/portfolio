@@ -17,7 +17,7 @@ const textVariants = {
 }
 const SilVariants = {
   initial:{
-    x:"50%"
+    x:"35%"
   },
   animate:{
     x: "-65%",

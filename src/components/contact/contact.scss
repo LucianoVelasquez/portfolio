@@ -38,9 +38,17 @@
     span {
       font-weight: 300;
     }
+
+    .but-mobile{
+      @include mobile {
+        width: auto;
+        margin-top: 3px;
+      } 
+    }
   }
 
   .formContainer {
+    margin-top: 17%;
     flex: 1;
     position: relative;
     

@@ -2,6 +2,9 @@ import { useRef, useState, useEffect } from "react";
 import "./service.scss";
 import { animate, motion, useInView } from "framer-motion";
 import Skeleton from "./skeleton";
+import { useMyContext } from "../context/mycontext"
+import imga from "../../utils/code-black.png";
+import gitdark from "../../utils/git-dark.svg";
 
 const variants = {
   initial: {
@@ -25,6 +28,9 @@ const Services = () => {
   const [mostrarImagen, setMostrarImagen] = useState(false);
   const [cargando, setCargando] = useState(true);
   const isInView = useInView(ref, { margin: "-100px" });
+  const { globalState, updateGlobalState } = useMyContext();
+
+  console.log(globalState.tema);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -56,8 +62,8 @@ const Services = () => {
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img
-            className="ima"
-            src="https://www.svgrepo.com/show/521573/code.svg"
+            className={globalState.tema == "light" ? "ima" : "ima-dark"}
+            src={globalState.tema == "light" ? "https://www.svgrepo.com/show/521573/code.svg" : imga}
             alt=""
           />
           <h1>
@@ -76,8 +82,8 @@ const Services = () => {
           </a>
           <a href="https://github.com/LucianoVelasquez">
             <img
-              className="mask mask-squircle ima2"
-              src="https://www.svgrepo.com/show/445786/github.svg"
+              className={globalState.tema == "light" ? "mask mask-squircle ima2" : "mask mask-squircle ima2-dark"}
+              src={globalState.tema == "light" ? "https://www.svgrepo.com/show/445786/github.svg": gitdark}
             />
           </a>
         </div>

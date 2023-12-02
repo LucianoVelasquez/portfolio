@@ -1,5 +1,9 @@
-import "./footer.scss"
+import "./footer.scss";
+import { useMyContext } from "../context/mycontext";
+import gitdark from "../../utils/git-dark.svg";
+
 const Footer = () => {
+  const { globalState, updateGlobalState } = useMyContext();
   return (
     <footer className="footer items-center p-4 bg-base-300 text-base-content footer1">
       <aside className="items-center grid-flow-col">
@@ -16,12 +20,18 @@ const Footer = () => {
         </svg>
         <p>Copyright © 2023 - All right reserved</p>
       </aside>
-      <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+      <nav className="grid-flow-col gap-3 md:place-self-center md:justify-self-end">
         <a href="https://www.linkedin.com/in/lv-dev/">
-          <img className="w-14 h-18" src="https://www.svgrepo.com/show/506517/linkedin.svg"></img>
+          <img
+            className="w-14 h-14"
+            src="https://www.svgrepo.com/show/448234/linkedin.svg"
+          ></img>
         </a>
         <a href="https://github.com/LucianoVelasquez">
-        <img className="w-10 h-10 mt-1" src="https://www.svgrepo.com/show/512317/github-142.svg"></img>
+          <img
+            className={globalState.tema == "light" ? "w-14 h-18" : "w-10 h-14"}
+            src={globalState.tema == "light"? "https://www.svgrepo.com/show/445786/github.svg": gitdark}
+          ></img>
         </a>
       </nav>
     </footer>
