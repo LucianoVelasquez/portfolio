@@ -1,5 +1,16 @@
 import "./Theme.scss"
+import { useMyContext } from "../context/mycontext"
+
 const ThemeController = () => {
+
+  const { globalState, updateGlobalState } = useMyContext();
+
+ 
+
+  const handleTheme = (e) =>{
+    updateGlobalState({...globalState,tema: e.target.value})
+  }
+
   return (
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost m-1 d1">
@@ -34,6 +45,7 @@ const ThemeController = () => {
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Light"
             value="light"
+            onChange={handleTheme}
           />
         </li>
         <li>
@@ -43,6 +55,7 @@ const ThemeController = () => {
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Dark"
             value="dracula"
+            onChange={handleTheme}
           />
         </li>
       </ul>

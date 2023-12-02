@@ -73,6 +73,17 @@
         }
       }
 
+      .ima-dark {
+        width: 140px;
+        height: 129px;
+
+        @include mobile {
+          width: 90px;
+          height: 102px;
+          margin-top: 3px;
+        }
+      }
+
       .ima2{
         width: 110px;
         height: 130px;
@@ -80,6 +91,17 @@
         @include mobile {
           width: 80px;
           height: 80px;
+        }
+        
+        
+      }
+      .ima2-dark{
+        width: 90px;
+        height: 86px;
+
+        @include mobile {
+          width: 72px;
+          height: 69px;
         }
         
         
