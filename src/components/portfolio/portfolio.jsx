@@ -17,6 +17,8 @@ const items = [
       "https://www.svgrepo.com/show/374118/tailwind.svg",
       "https://www.svgrepo.com/show/374071/sequelize.svg",
     ],
+    url: "https://countries-client-vvox.onrender.com/",
+    repo: "https://github.com/LucianoVelasquez/countries-client/tree/main",
   },
   {
     id: 2,
@@ -38,6 +40,8 @@ const items = [
       "https://www.svgrepo.com/show/373700/jest.svg",
       "https://www.svgrepo.com/show/353435/auth0.svg",
     ],
+    url: "https://sportiverse-client.onrender.com/",
+    repo: "",
   },
 ];
 
@@ -76,10 +80,21 @@ const Single = ({ item }) => {
               </div>
             </div>
 
-            <button className="btn w-48 cursor-not-allowed">
-              <span className="loading loading-spinner"></span>
-              Repo
-            </button>
+            <div className="but-div gap-5 flex">
+              <a href={item.url}>
+                {" "}
+                <button className="btn btn-outline btn-primary w-36">
+                  Demo
+                </button>
+              </a>
+              {
+                item.repo == ""? " " : <a href={item.repo}>
+                <button className="btn btn-outline btn-secondary w-36">
+                  Repositorio
+                </button>
+              </a>
+              }
+            </div>
           </motion.div>
         </div>
       </div>
