@@ -6,7 +6,7 @@ const items = [
   {
     id: 1,
     title: "Countri App",
-    img: "https://media.licdn.com/dms/image/D4D2DAQGNG76JfELiLA/profile-treasury-image-shrink_800_800/0/1692280768213?e=1701691200&v=beta&t=6Ih0uRlYmm_iHbJ9DPLewct6ALY8Gu4RAVQUpOCjYpY",
+    img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/1692280768213.jpg",
     desc: "Proyecto individual el cual consiste en trabajar con una API de Paises, mostrar su información, filtrarla, ordenarla, realizar búsquedas y realizar un CRUD completo",
     tec: [
       "https://www.svgrepo.com/show/349419/javascript.svg",
@@ -23,7 +23,7 @@ const items = [
   {
     id: 2,
     title: "Sportiverse",
-    img: "https://media.licdn.com/dms/image/D4D2DAQE1gSXzSnIVcQ/profile-treasury-image-shrink_800_800/0/1692279677725?e=1701691200&v=beta&t=UzAWIfEyZ7PJPLUJj0crkrXCoYzwwj3DGadDcr8u-Yk",
+    img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/1692279677725.jpg",
     desc: `Sportiverse era una aplicación web destinada a complejos que ofrecen el alquiler de espacios para realizar
       actividades deportivas.
       El objetivo era facilitar la reserva y el pago de los servicios, así como crear una
