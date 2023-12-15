@@ -73,7 +73,7 @@ const Hero = () => {
             <a href="#contact">
               <motion.button
                 variants={textVariants}
-                className="btn btn-outline btn-primary mt-10"
+                className="btn btn-outline btn-error mt-10"
               >
                 Contactame
               </motion.button>

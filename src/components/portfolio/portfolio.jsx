@@ -43,6 +43,23 @@ const items = [
     url: "https://sportiverse-client.onrender.com/",
     repo: "",
   },
+  {
+    id: 3,
+    title: "Api Country - Spring Boot",
+    img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/119shots_so.jpg",
+    desc: `Proyecto en el que consiste trabajar con datos de paises y donde cada pais puede estar relacionado con una o mas actividades, contiene endpoints publicos y privados, protejidos con Spring Security y JWT Token, totalmente documentado con
+    SpringDoc - Swagger UI.`,
+    tec: [
+      "https://svgl.vercel.app/library/java.svg",
+      "https://www.svgrepo.com/show/376350/spring.svg",
+      "https://svgl.vercel.app/library/swagger.svg",
+      "https://www.svgrepo.com/show/354200/postgresql.svg",
+      "https://svgl.vercel.app/library/jwt.svg",
+      "https://cdn.coursehunter.net/category/spring-security.png",
+    ],
+    url: "https://test-java-i7d5.onrender.com/swagger-ui/index.html",
+    repo: "https://github.com/LucianoVelasquez/test-springboot",
+  },
 ];
 
 const Single = ({ item }) => {
