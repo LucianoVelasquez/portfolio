@@ -116,7 +116,7 @@ const Contact = () => {
           <button className="btn btn-outline w-5/12 but-mobile">
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/1kNCX0ZwMX9f3CGtsFg1pMAbtv4V2A0DB/view?usp=sharing"
+              href="https://drive.google.com/file/d/1KZ7AUYcZHksVMTkY0nk7R4mLX_IgsoeF/view?usp=sharing"
             >
               Descargar CV
             </a>
