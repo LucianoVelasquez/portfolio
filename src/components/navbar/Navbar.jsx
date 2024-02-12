@@ -28,7 +28,7 @@ const Navbar = () => {
                 <a href="#home" className="text-4xl hover:scale-105 focus:scale-95  ">Inicio</a>
               </li>
               <li>
-              <a className="text-4xl hover:scale-105 focus:scale-95  " target="_blank" href="https://drive.google.com/file/d/1KZ7AUYcZHksVMTkY0nk7R4mLX_IgsoeF/view?usp=sharing">
+              <a className="text-4xl hover:scale-105 focus:scale-95  " target="_blank" href="https://drive.google.com/file/d/1C5gpbDUaE5AGTETZShM_eX6HN-kHtBNx/view?usp=sharing">
               Descargar CV</a>
               </li>
               <li>

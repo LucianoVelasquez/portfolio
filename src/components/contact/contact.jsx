@@ -97,18 +97,24 @@ const Contact = () => {
           Trabajemos juntos
         </motion.h1>
         <motion.div className="item" variants={variants}>
+          <h2 className="text-lg" >WhatsApp</h2>
+          <a href="https://api.whatsapp.com/send?phone=3435174155&text=Hola Luciano!" target="_blank" className="text-lg link link-hover link-primary">
+            Enviar al WhatsApp
+          </a>
+        </motion.div>
+        <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>luciano.vel166@gmail.com</span>
+          <a href="mailto:luciano.vel166@gmail.com" className="link link-hover link-primary">luciano.vel166@gmail.com</a>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Linkedin</h2>
-          <a className="link link-hover link-primary">
+          <a href="https://www.linkedin.com/in/lv-dev/" target="_blank" className="link link-hover link-primary">
             https://www.linkedin.com/in/lv-dev/
           </a>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>GitHub</h2>
-          <a className="link link-hover link-primary">
+          <a href="https://github.com/LucianoVelasquez" target="_blank" className="link link-hover link-primary">
             https://github.com/LucianoVelasquez
           </a>
         </motion.div>
@@ -116,7 +122,7 @@ const Contact = () => {
           <button className="btn btn-outline w-5/12 but-mobile">
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/1KZ7AUYcZHksVMTkY0nk7R4mLX_IgsoeF/view?usp=sharing"
+              href="https://drive.google.com/file/d/1C5gpbDUaE5AGTETZShM_eX6HN-kHtBNx/view?usp=sharing"
             >
               Descargar CV
             </a>
