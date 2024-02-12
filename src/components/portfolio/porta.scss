@@ -52,8 +52,10 @@
 .bar{
     @include mobile{
         display: flex;
-        padding-top: calc(99vh - 53px);
+        padding-top: calc(100vh - 4px);
         flex-direction: column-reverse;
+        bottom: 0;
+        margin-top: 50px;
     } 
 }
 

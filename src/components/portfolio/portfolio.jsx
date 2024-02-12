@@ -123,7 +123,7 @@ const Portfolio = () => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["end end", "start start"],
+    offset: ["start start", "end end"],
   });
 
   const scaleX = useSpring(scrollYProgress, {
@@ -132,15 +132,15 @@ const Portfolio = () => {
   });
   return (
     <div className="relative" id="portafolio" ref={ref}>
-      <div className="sticky top-0 left-0 pt-12 text-center text-5xl font-bold bar">
-        <h2 className="text-3xl mb-4">
-          Mis proyectos
-          <span className="ml-2 badge badge-lg">NEW</span>
-        </h2>
+      <div className="sticky top-0 text-start text-6xl font-bold bar ">
         <motion.div
           style={{ scaleX }}
-          className="h-1 bg-gradient-to-r from-purple-500 via-red-500 to-yellow-300"
+          className="mb-0 sm:mb-12 h-1 bg-gradient-to-r from-purple-500 via-red-500 to-yellow-300"
         ></motion.div>
+        {/* <h2 className="text-3xl mb-4">
+          Mis proyectos
+          <span className="ml-2 badge badge-lg">NEW</span>
+        </h2> */}
       </div>
       <div>
         {items.map((item) => (

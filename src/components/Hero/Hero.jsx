@@ -38,7 +38,7 @@ const Hero = () => {
           className="object-contain w-12 rounded-full xl:w-1/2  xl:mb-28 lg:w-80 lg:mb-28 imgres"
         />
         <motion.div
-          className="mr-16 containerres"
+          className="containerres"
           variants={textVariants}
           initial="initial"
           animate="animate"
@@ -47,21 +47,23 @@ const Hero = () => {
             variants={textVariants}
             className="text-3xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-red-500 to-yellow-300  font-bold tracking-wider"
           >
-            LUCIANO VELASQUEZ
+           LUCIANO VELASQUEZ
           </motion.h1>
-          <motion.h2
+          <motion.h1
             variants={textVariants}
             className="text-5xl font-bold mt-6 text-start"
           >
             Full Stack Developer
-          </motion.h2>
-          <motion.h2
+          </motion.h1>
+          <motion.h1
             variants={textVariants}
-            className="text-4xl font-bold mt-4 "
+            className="text-xl sm:text-xl sm:font-extralight mt-4 "
           >
-            Backend Developer First
-          </motion.h2>
-          <motion.div variants={textVariants} className="but">
+            Soy un <strong>Dev web</strong> con formación en analista de sistemas y experiencia en proyectos full stack, me especializo en el desarrollo <strong>frontend</strong> utilizando <strong>React.</strong>
+            <br></br>
+            
+          </motion.h1>
+          <motion.div variants={textVariants} className="but mt-6">
             <a href="#portafolio">
               <motion.button
                 variants={textVariants}

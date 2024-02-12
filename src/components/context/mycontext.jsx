@@ -9,7 +9,7 @@ export const useMyContext = () => {
 export const MyContextProvider = ({ children }) => {
   const initialState = {
     // Define aquí tus propiedades iniciales del estado global
-    tema: 'light',
+    tema: 'dracula',
   };
 
   const [globalState, setGlobalState] = useState(initialState);
