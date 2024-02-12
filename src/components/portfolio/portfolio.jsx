@@ -5,23 +5,6 @@ import "./porta.scss";
 const items = [
   {
     id: 1,
-    title: "Countri App",
-    img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/1692280768213.jpg",
-    desc: "Proyecto individual el cual consiste en trabajar con una API de Paises, mostrar su información, filtrarla, ordenarla, realizar búsquedas y realizar un CRUD completo",
-    tec: [
-      "https://www.svgrepo.com/show/349419/javascript.svg",
-      "https://www.svgrepo.com/show/374167/vite.svg",
-      "https://www.svgrepo.com/show/452075/node-js.svg",
-      "https://www.svgrepo.com/show/354200/postgresql.svg",
-      "https://www.svgrepo.com/show/452093/redux.svg",
-      "https://www.svgrepo.com/show/374118/tailwind.svg",
-      "https://www.svgrepo.com/show/374071/sequelize.svg",
-    ],
-    url: "https://countries-client-vvox.onrender.com/",
-    repo: "https://github.com/LucianoVelasquez/countries-client/tree/main",
-  },
-  {
-    id: 2,
     title: "Sportiverse",
     img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/1692279677725.jpg",
     desc: `Sportiverse era una aplicación web destinada a complejos que ofrecen el alquiler de espacios para realizar
@@ -44,21 +27,35 @@ const items = [
     repo: "",
   },
   {
-    id: 3,
-    title: "Api Country - Spring Boot",
-    img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/119shots_so.jpg",
-    desc: `Proyecto en el que consiste trabajar con datos de paises y donde cada pais puede estar relacionado con una o mas actividades, contiene endpoints publicos y privados, protejidos con Spring Security y JWT Token, totalmente documentado con
-    SpringDoc - Swagger UI.`,
+    id: 2,
+    title: "App R&M - React & Vite",
+    img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/720shots_so.jpg",
+    desc: `Proyecto en el que consiste desarrollar una aplicación web con React y Vite que permita a los usuarios buscar y visualizar información sobre personajes de la serie "Rick and Morty" utilizando la Api de Rick and Morty`,
     tec: [
-      "https://svgl.vercel.app/library/java.svg",
-      "https://www.svgrepo.com/show/376350/spring.svg",
-      "https://svgl.vercel.app/library/swagger.svg",
-      "https://www.svgrepo.com/show/354200/postgresql.svg",
-      "https://svgl.vercel.app/library/jwt.svg",
-      "https://cdn.coursehunter.net/category/spring-security.png",
+      "https://www.svgrepo.com/show/354259/react.svg",
+      "https://www.svgrepo.com/show/374167/vite.svg",
+      "https://www.svgrepo.com/show/452093/redux.svg",
+      "https://www.svgrepo.com/show/374118/tailwind.svg",
+      "https://www.svgrepo.com/show/373644/graphql.svg",
     ],
-    url: "https://test-java-i7d5.onrender.com/swagger-ui/index.html",
-    repo: "https://github.com/LucianoVelasquez/test-springboot",
+    url: "https://challange-rm.vercel.app/",
+    repo: "https://github.com/LucianoVelasquez/challange-rm",
+  },{
+    id: 3,
+    title: "Countri App",
+    img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/1692280768213.jpg",
+    desc: "Proyecto individual el cual consiste en trabajar con una API de Paises, mostrar su información, filtrarla, ordenarla, realizar búsquedas y realizar un CRUD completo",
+    tec: [
+      "https://www.svgrepo.com/show/349419/javascript.svg",
+      "https://www.svgrepo.com/show/374167/vite.svg",
+      "https://www.svgrepo.com/show/452075/node-js.svg",
+      "https://www.svgrepo.com/show/354200/postgresql.svg",
+      "https://www.svgrepo.com/show/452093/redux.svg",
+      "https://www.svgrepo.com/show/374118/tailwind.svg",
+      "https://www.svgrepo.com/show/374071/sequelize.svg",
+    ],
+    url: "https://countries-client-vvox.onrender.com/",
+    repo: "https://github.com/LucianoVelasquez/countries-client/tree/main",
   },
 ];
 
@@ -92,20 +89,20 @@ const Single = ({ item }) => {
               <div className="collapse-content flex justify-start items-center">
                 {/* <p>{item.tec}</p> */}
                 {item.tec.map((item, index) => (
-                  <img key={index} className="h-7 w-8 ml-2" src={item} alt="" />
+                  <img key={index} className="h-8 w-9 ml-2" src={item} alt="" />
                 ))}
               </div>
             </div>
 
             <div className="but-div gap-5 flex">
-              <a href={item.url}>
+              <a href={item.url} target="_blank">
                 {" "}
                 <button className="btn btn-outline btn-primary w-36">
                   Demo
                 </button>
               </a>
               {
-                item.repo == ""? " " : <a href={item.repo}>
+                item.repo == ""? " " : <a href={item.repo} target="_blank">
                 <button className="btn btn-outline btn-secondary w-36">
                   Repositorio
                 </button>
