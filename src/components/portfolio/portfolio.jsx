@@ -1,5 +1,6 @@
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { SquareArrowOutUpRight,Github } from 'lucide-react';
 import "./porta.scss";
 
 const items = [
@@ -99,12 +100,14 @@ const Single = ({ item }) => {
                 {" "}
                 <button className="btn btn-outline btn-primary w-36">
                   Demo
+                  <SquareArrowOutUpRight size={16} />
                 </button>
               </a>
               {
                 item.repo == ""? " " : <a href={item.repo} target="_blank">
                 <button className="btn btn-outline btn-secondary w-36">
                   Repositorio
+                  <Github size={18} />
                 </button>
               </a>
               }

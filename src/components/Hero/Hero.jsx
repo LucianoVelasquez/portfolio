@@ -1,5 +1,6 @@
 import { hh2 } from "./h2.module.css";
 import { motion } from "framer-motion";
+import { Contact,FolderTree } from 'lucide-react';
 import "./hero.scss";
 const textVariants = {
   initial: {
@@ -70,6 +71,7 @@ const Hero = () => {
                 className="btn btn-outline btn-primary mt-10 mr-8"
               >
                 Ver Proyectos
+                <FolderTree />
               </motion.button>
             </a>
             <a href="#contact">
@@ -78,6 +80,7 @@ const Hero = () => {
                 className="btn btn-outline btn-error mt-10"
               >
                 Contactame
+                <Contact />
               </motion.button>
             </a>
           </motion.div>
