@@ -4,7 +4,8 @@ import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { PhoneOutgoing,MailCheck,Linkedin,Github,FileDown } from 'lucide-react';
+import { CornerRightDown,ArrowUp } from 'lucide-react';
 const variants = {
   initial: {
     y: 0,
@@ -87,49 +88,68 @@ const Contact = () => {
   return (
     <motion.div
       ref={ref}
-      className="contact"
+      className="contact relative"
       variants={variants}
       initial="initial"
       whileInView="animate"
     >
-      <motion.div className="textContainer" variants={variants}>
+      <motion.div className="textContainer justify-center items-center text-center" variants={variants}>
+
         <motion.h1 variants={variants} className="text-center">
           Trabajemos juntos
         </motion.h1>
-        <motion.div className="item" variants={variants}>
-          <h2 className="text-lg" >WhatsApp</h2>
+
+        <motion.div className="item " variants={variants}>
+          <div className="flex gap-x-2 justify-center items-center">
+            <PhoneOutgoing size={16} />
+            <h2 className="text-lg" >WhatsApp</h2>
+          </div>
           <a href="https://api.whatsapp.com/send?phone=3435174155&text=Hola Luciano!" target="_blank" className="text-lg link link-hover link-primary">
             Enviar al WhatsApp
           </a>
         </motion.div>
+        
         <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
-          <a href="mailto:luciano.vel166@gmail.com" className="link link-hover link-primary">luciano.vel166@gmail.com</a>
+          <div className="flex gap-x-2 items-center justify-center">
+            <MailCheck size={16} />
+            <h2 className="text-lg" >Mail</h2>
+          </div>
+          <a href="mailto:luciano.vel166@gmail.com" className="text-lg link link-hover link-primary">luciano.vel166@gmail.com</a>
         </motion.div>
+        
         <motion.div className="item" variants={variants}>
-          <h2>Linkedin</h2>
-          <a href="https://www.linkedin.com/in/lv-dev/" target="_blank" className="link link-hover link-primary">
+          <div className="flex gap-x-2 justify-center items-center">
+          <Linkedin size={16} />
+          <h2 className="text-lg">Linkedin</h2>
+          </div>
+          
+          <a href="https://www.linkedin.com/in/lv-dev/" target="_blank" className="text-lg link link-hover link-primary">
             https://www.linkedin.com/in/lv-dev/
           </a>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>GitHub</h2>
-          <a href="https://github.com/LucianoVelasquez" target="_blank" className="link link-hover link-primary">
+          <div className="flex gap-x-2 justify-center items-center">
+            <Github size={16} />
+            <h2 className="text-lg">GitHub</h2>
+          </div>
+          <a href="https://github.com/LucianoVelasquez" target="_blank" className="text-lg link link-hover link-primary">
             https://github.com/LucianoVelasquez
           </a>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <button className="btn btn-outline w-5/12 but-mobile">
-            <a
-              target="_blank"
-              href="https://drive.google.com/file/d/1C5gpbDUaE5AGTETZShM_eX6HN-kHtBNx/view?usp=sharing"
-            >
-              Descargar CV
-            </a>
-          </button>
+            <button className="flex btn btn-outline w-fit but-mobile btn-lg md:btn-md">
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/1C5gpbDUaE5AGTETZShM_eX6HN-kHtBNx/view?usp=sharing"
+              >
+                Descargar CV
+              </a>
+            <FileDown size={16}  />
+            </button>
         </motion.div>
       </motion.div>
       <div className="formContainer">
+        
         <motion.form
           ref={formRef}
           onSubmit={sendEmail}
@@ -137,6 +157,9 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 2 }}
         >
+          <div className="flex items-start gap-x-5">
+            <p className="text-xl">Enviar Mensaje</p> <CornerRightDown size={46} />
+          </div>
           <input
             type="text"
             required
@@ -156,11 +179,13 @@ const Contact = () => {
             onChange={changeValue}
           />
           <textarea
-            className="textarea textarea-primary textarea-bordered textarea-lg w-full max-w-xl"
+            maxlength="280"
+            className="textarea textarea-primary textarea-bordered textarea-lg overflow-clip h-56 w-full max-w-xl "
             placeholder="Mensaje"
             name="message"
             value={value.message}
             onChange={changeValue}
+            required
           ></textarea>
           <button
             type="submit"
@@ -175,6 +200,7 @@ const Contact = () => {
           />
         </motion.form>
       </div>
+          <div className="md:absolute bottom-0 right-0 md:right-0 md:bottom-4 hover:scale-110 focus:scale-90 bg-primary text-secondary-content rounded-full p-2"><a href="#home"><ArrowUp size={36} /> </a></div>
     </motion.div>
   );
 };

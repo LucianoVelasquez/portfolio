@@ -1,5 +1,6 @@
 import "./Theme.scss"
 import { useMyContext } from "../context/mycontext"
+import { SunMoon } from 'lucide-react';
 
 const ThemeController = () => {
 
@@ -13,9 +14,9 @@ const ThemeController = () => {
 
   return (
     <div className="dropdown">
-      <label tabIndex={0} className="btn btn-ghost m-1 d1">
+      <label tabIndex={0} className="btn btn-ghost m-1  mr-6 d1">
         Temas
-        <svg
+        {/* <svg
           width="12px"
           height="12px"
           className="h-2 w-2 fill-current opacity-60 inline-block"
@@ -23,7 +24,8 @@ const ThemeController = () => {
           viewBox="0 0 2048 2048"
         >
           <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
-        </svg>
+        </svg> */}
+        <SunMoon />
       </label>
       <ul
         tabIndex={0}
@@ -44,7 +46,7 @@ const ThemeController = () => {
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Light"
-            value="light"
+            value="fantasy"
             onChange={handleTheme}
           />
         </li>

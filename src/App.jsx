@@ -24,7 +24,7 @@ const App = () => {
         </section>
         <section className="section2">
           <Footer></Footer>
-        </section>
+        </section> 
       </div>
     </MyContextProvider>
   );
