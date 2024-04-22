@@ -68,19 +68,19 @@ const Hero = () => {
             <a href="#portafolio">
               <motion.button
                 variants={textVariants}
-                className="btn btn-outline btn-primary mt-10 mr-8"
+                className="btn btn-outline btn-primary mt-10 mr-8 "
               >
                 Ver Proyectos
-                <FolderTree />
+                <FolderTree size={20}/>
               </motion.button>
             </a>
             <a href="#contact">
               <motion.button
                 variants={textVariants}
-                className="btn btn-outline btn-error mt-10"
+                className="btn btn-outline btn-error mt-10 "
               >
                 Contactame
-                <Contact />
+                <Contact size={20}/>
               </motion.button>
             </a>
           </motion.div>

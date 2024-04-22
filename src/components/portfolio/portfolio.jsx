@@ -2,63 +2,9 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { SquareArrowOutUpRight,Github } from 'lucide-react';
 import "./porta.scss";
+import { useMyContext } from "../context/mycontext"
 
-const items = [
-  {
-    id: 1,
-    title: "Sportiverse",
-    img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/1692279677725.jpg",
-    desc: `Sportiverse era una aplicación web destinada a complejos que ofrecen el alquiler de espacios para realizar
-      actividades deportivas.
-      El objetivo era facilitar la reserva y el pago de los servicios, así como crear una
-      comunidad de usuarios que pudieran compartir sus experiencias y opiniones.`,
-    tec: [
-      "https://www.svgrepo.com/show/349419/javascript.svg",
-      "https://www.svgrepo.com/show/374167/vite.svg",
-      "https://www.svgrepo.com/show/452075/node-js.svg",
-      "https://www.svgrepo.com/show/354200/postgresql.svg",
-      "https://www.svgrepo.com/show/452093/redux.svg",
-      "https://www.svgrepo.com/show/374118/tailwind.svg",
-      "https://www.svgrepo.com/show/374071/sequelize.svg",
-      "https://www.svgrepo.com/show/517750/mercado-pago.svg",
-      "https://www.svgrepo.com/show/373700/jest.svg",
-      "https://www.svgrepo.com/show/353435/auth0.svg",
-    ],
-    url: "https://sportiverse-client.onrender.com/",
-    repo: "",
-  },
-  {
-    id: 2,
-    title: "App R&M - React & Vite",
-    img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/720shots_so.jpg",
-    desc: `Proyecto en el que consiste desarrollar una aplicación web con React y Vite que permita a los usuarios buscar y visualizar información sobre personajes de la serie "Rick and Morty" utilizando la Api de Rick and Morty`,
-    tec: [
-      "https://www.svgrepo.com/show/354259/react.svg",
-      "https://www.svgrepo.com/show/374167/vite.svg",
-      "https://www.svgrepo.com/show/452093/redux.svg",
-      "https://www.svgrepo.com/show/374118/tailwind.svg",
-      "https://www.svgrepo.com/show/373644/graphql.svg",
-    ],
-    url: "https://challange-rm.vercel.app/",
-    repo: "https://github.com/LucianoVelasquez/challange-rm",
-  },{
-    id: 3,
-    title: "Countri App",
-    img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/1692280768213.jpg",
-    desc: "Proyecto individual el cual consiste en trabajar con una API de Paises, mostrar su información, filtrarla, ordenarla, realizar búsquedas y realizar un CRUD completo",
-    tec: [
-      "https://www.svgrepo.com/show/349419/javascript.svg",
-      "https://www.svgrepo.com/show/374167/vite.svg",
-      "https://www.svgrepo.com/show/452075/node-js.svg",
-      "https://www.svgrepo.com/show/354200/postgresql.svg",
-      "https://www.svgrepo.com/show/452093/redux.svg",
-      "https://www.svgrepo.com/show/374118/tailwind.svg",
-      "https://www.svgrepo.com/show/374071/sequelize.svg",
-    ],
-    url: "https://countries-client-vvox.onrender.com/",
-    repo: "https://github.com/LucianoVelasquez/countries-client/tree/main",
-  },
-];
+
 
 const Single = ({ item }) => {
   const ref = useRef();
@@ -120,7 +66,83 @@ const Single = ({ item }) => {
 };
 
 const Portfolio = () => {
+  const { globalState, updateGlobalState } = useMyContext();
+  const items = [
+    {
+      id: 0,
+      title: "A&G - Ventas",
+      img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/937shots_so.jpg",
+      desc: `Aplicacion web que tiene como objetivo administrar el stock y ventas de productos para pequeños y medianos negocios. Ademas permite la gestion de cuentas corrientes de clientes como la visualicacion de datos semanasles y mensuales tanto de ventas como de deudores.`,
+      tec: [
+        "https://www.svgrepo.com/show/354478/typescript-icon.svg",
+        `https://www.svgrepo.com/show/368858/nextjs.svg`,
+        "https://www.svgrepo.com/show/354200/postgresql.svg",
+        "https://www.svgrepo.com/show/452093/redux.svg",
+        "https://www.svgrepo.com/show/374118/tailwind.svg",
+        `${globalState.tema == 'dracula'? "https://www.svgrepo.com/show/374002/prisma.svg": "https://www.svgrepo.com/show/373776/light-prisma.svg"}`,
+      ],
+      url: "https://ag-ventas.vercel.app",
+      repo: "https://github.com/LucianoVelasquez/sh.ui",
+    },
+    {
+      id: 1,
+      title: "Sportiverse",
+      img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/1692279677725.jpg",
+      desc: `Sportiverse era una aplicación web destinada a complejos que ofrecen el alquiler de espacios para realizar
+        actividades deportivas.
+        El objetivo era facilitar la reserva y el pago de los servicios, así como crear una
+        comunidad de usuarios que pudieran compartir sus experiencias y opiniones.`,
+      tec: [
+        "https://www.svgrepo.com/show/349419/javascript.svg",
+        "https://www.svgrepo.com/show/374167/vite.svg",
+        "https://www.svgrepo.com/show/452075/node-js.svg",
+        "https://www.svgrepo.com/show/354200/postgresql.svg",
+        "https://www.svgrepo.com/show/452093/redux.svg",
+        "https://www.svgrepo.com/show/374118/tailwind.svg",
+        "https://www.svgrepo.com/show/374071/sequelize.svg",
+        "https://www.svgrepo.com/show/517750/mercado-pago.svg",
+        "https://www.svgrepo.com/show/373700/jest.svg",
+        "https://www.svgrepo.com/show/353435/auth0.svg",
+      ],
+      url: "https://sportiverse-client.onrender.com/",
+      repo: "",
+    },
+    {
+      id: 2,
+      title: "App R&M - React & Vite",
+      img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/720shots_so.jpg",
+      desc: `Proyecto en el que consiste desarrollar una aplicación web con React y Vite que permita a los usuarios buscar y visualizar información sobre personajes de la serie "Rick and Morty" utilizando la Api de Rick and Morty`,
+      tec: [
+        "https://www.svgrepo.com/show/354259/react.svg",
+        "https://www.svgrepo.com/show/374167/vite.svg",
+        "https://www.svgrepo.com/show/452093/redux.svg",
+        "https://www.svgrepo.com/show/374118/tailwind.svg",
+        "https://www.svgrepo.com/show/373644/graphql.svg",
+      ],
+      url: "https://challange-rm.vercel.app/",
+      repo: "https://github.com/LucianoVelasquez/challange-rm",
+    },{
+      id: 3,
+      title: "Countri App",
+      img: "https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/1692280768213.jpg",
+      desc: "Proyecto individual el cual consiste en trabajar con una API de Paises, mostrar su información, filtrarla, ordenarla, realizar búsquedas y realizar un CRUD completo",
+      tec: [
+        "https://www.svgrepo.com/show/349419/javascript.svg",
+        "https://www.svgrepo.com/show/374167/vite.svg",
+        "https://www.svgrepo.com/show/452075/node-js.svg",
+        "https://www.svgrepo.com/show/354200/postgresql.svg",
+        "https://www.svgrepo.com/show/452093/redux.svg",
+        "https://www.svgrepo.com/show/374118/tailwind.svg",
+        "https://www.svgrepo.com/show/374071/sequelize.svg",
+      ],
+      url: "https://countries-client-vvox.onrender.com/",
+      repo: "https://github.com/LucianoVelasquez/countries-client/tree/main",
+    },
+  ];
   const ref = useRef();
+  
+  console.log(globalState.tema)
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end end"],
