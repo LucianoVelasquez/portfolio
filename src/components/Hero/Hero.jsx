@@ -64,25 +64,29 @@ const Hero = () => {
             <br></br>
             
           </motion.h1>
-          <motion.div variants={textVariants} className="but mt-6">
-            <a href="#portafolio">
+          <motion.div variants={textVariants} className="mt-6 flex justify-end sm:flex sm:justify-start">
+            
               <motion.button
                 variants={textVariants}
                 className="btn btn-outline btn-primary mt-10 mr-8 "
               >
+                <a href="#portafolio">
                 Ver Proyectos
-                <FolderTree size={20}/>
+                </a>
+                <FolderTree size={18}/>
               </motion.button>
-            </a>
-            <a href="#contact">
+            
+            
               <motion.button
                 variants={textVariants}
-                className="btn btn-outline btn-error mt-10 "
+                className="btn btn-outline btn-error ml-5 mt-10 "
               >
+                <a href="#contact">
                 Contactame
-                <Contact size={20}/>
+                </a>
+                <Contact size={18}/>
               </motion.button>
-            </a>
+            
           </motion.div>
         </motion.div>
       </div>

@@ -13,7 +13,7 @@ const Single = ({ item }) => {
   });
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
   return (
-    <section>
+    <section className="z-50">
       <div className="flex justify-center items-center h-full w-full overflow-hidden">
         <div className="max-w-screen-xl h-full m-auto flex gap-12 items-center justify-center c2">
           <div className="flex-1 h-1/2 im2" ref={ref}>
@@ -44,14 +44,14 @@ const Single = ({ item }) => {
             <div className="but-div gap-5 flex">
               <a href={item.url} target="_blank">
                 {" "}
-                <button className="btn btn-outline btn-primary w-36">
+                <button className="btn btn-outline btn-primary w-36 ">
                   Demo
                   <SquareArrowOutUpRight size={16} />
                 </button>
               </a>
               {
                 item.repo == ""? " " : <a href={item.repo} target="_blank">
-                <button className="btn btn-outline btn-secondary w-36">
+                <button className="btn btn-outline btn-secondary w-36 ">
                   Repositorio
                   <Github size={18} />
                 </button>
@@ -141,7 +141,6 @@ const Portfolio = () => {
   ];
   const ref = useRef();
   
-  console.log(globalState.tema)
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -153,23 +152,23 @@ const Portfolio = () => {
     damping: 30,
   });
   return (
-    <div className="relative" id="portafolio" ref={ref}>
-      <div className="sticky top-0 text-start text-6xl font-bold bar ">
+    <>
+    
+    <div className="relative z-10" id="portafolio" ref={ref}>
+      <div className="sticky top-0 text-start text-6xl font-bold bar z-0 ">
         <motion.div
           style={{ scaleX }}
           className="mb-0 sm:mb-12 h-1 bg-gradient-to-r from-purple-500 via-red-500 to-yellow-300"
         ></motion.div>
-        {/* <h2 className="text-3xl mb-4">
-          Mis proyectos
-          <span className="ml-2 badge badge-lg">NEW</span>
-        </h2> */}
+      
       </div>
-      <div>
+      <div className="relative z-10">
         {items.map((item) => (
           <Single item={item} key={item.id} />
         ))}
       </div>
     </div>
+    </>
   );
 };
 
