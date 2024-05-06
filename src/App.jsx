@@ -1,6 +1,7 @@
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Portfolio from "./components/portfolio/portfolio";
+import NewPortFolio from "./components/newPortfolio/portfolio";
 import Service from "./components/services/service";
 import "./App.scss";
 import Contact from "./components/contact/contact";
@@ -15,14 +16,17 @@ const App = () => {
           <Navbar />
           <Hero />
         </section>
-        <section>
+        <section className="mb-20">
           <Service />
+        </section >
+        {/* <Portfolio></Portfolio> */}
+        <section id="portafolio">
+        <NewPortFolio></NewPortFolio>
         </section>
-        <Portfolio></Portfolio>
         <section id="contact">
           <Contact />
         </section>
-        <section className="section2">
+        <section className="mt-10">
           <Footer></Footer>
         </section> 
       </div>

@@ -4,13 +4,13 @@
 
 
 section{
-    height: 100vh;
+    /* height: 100vh; */
     scroll-snap-align: start;
-}
-.section2{
+} 
+/* .section2{
     height: 0vh;
     scroll-snap-align: center;
-}
+} */
 
 *{
     padding: 0;

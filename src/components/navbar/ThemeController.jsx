@@ -37,7 +37,8 @@ const ThemeController = () => {
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
             aria-label="Default"
-            value="default"
+            value="dracula"
+            onChange={handleTheme}
           />
         </li>
         <li>
