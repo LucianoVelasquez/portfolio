@@ -14,10 +14,10 @@ const Footer = () => {
       </aside>
       <nav className="grid-flow-col gap-3 md:place-self-center md:justify-self-end">
         <a href="https://www.linkedin.com/in/lv-dev/">
-          <Linkedin size={46} color="#5aabe3" />
+          <Linkedin size={36} />
         </a>
         <a href="https://github.com/LucianoVelasquez">
-          <Github size={46} />
+          <Github size={36} />
         </a>
       </nav>
     </footer>
