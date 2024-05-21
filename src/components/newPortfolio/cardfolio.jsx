@@ -64,7 +64,7 @@ export default function CardFolio({
       <div className="relative card-body justify-center items-center lg:justify-start lg:items-start pt-0"> 
       
         <h2 className="card-title">{title}</h2>
-        <p className="">Proyecto {typo}</p>
+        <p className="text-neutral-500">Proyecto {typo}</p>
         <Modal name={title} des={des} tec={imgArray}></Modal>
 
         {/* Contenedor de tecnologias */}
