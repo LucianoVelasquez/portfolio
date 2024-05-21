@@ -69,7 +69,7 @@ export default function NewPortFolio() {
       id: 3,
       title: "Countri App",
       typo:"Full Stack",
-      img: ["https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/1692280768213.jpg"],
+      img: ["https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/country2.jpg","https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/1692280768213.jpg","https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/country1.jpg"],
       desc: "Proyecto individual el cual consiste en trabajar con una API de Paises, mostrar su información, filtrarla, ordenarla, realizar búsquedas y realizar un CRUD completo",
       tec: [
         ["JavaScript","https://www.svgrepo.com/show/349419/javascript.svg"],
