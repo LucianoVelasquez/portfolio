@@ -13,13 +13,13 @@ export function Hero() {
             <p className="font-semibold mt-2">Full Stack Developer</p>
             <p className="font-light text-xl mt-6">Soy un Dev web con formación en analista de sistemas y experiencia en proyectos full stack, me especializo en el desarrollo frontend utilizando React. </p>
             <div className="flex gap-x-5 mt-7">
-                <Button className="h-[44px] w-40">Proyectos</Button>
-                <Button className="h-[44px] w-40">Descargar CV</Button>
+                <a href="#proyectos"><Button variant="faded" className="h-[44px] w-40 ">Proyectos</Button></a>
+                <a href="#" target="_blank"><Button variant="faded" className="h-[44px] w-40 bg-opacity-80">Descargar CV</Button></a>
             </div>
         </div>
 
-        <div className="h-5/6 mt-8 w-10/12 flex justify-center">
-            <Image src={img} alt="" className="object-contain"></Image>
+        <div className="h-5/6  w-full flex justify-center">
+            <Image src={img} alt="" className="object-cover"></Image>
         </div>
 
     </div>

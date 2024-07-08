@@ -9,6 +9,7 @@ export default function FooterSec(){
             
             <div className="flex justify-center items-center gap-x-5">
 
+            <a href="https://github.com/LucianoVelasquez" target="_blank">
             <Card className="bg-opacity-50 w-[300px] h-full mt-14" isHoverable >
                 <CardHeader className="pb-0 flex items-end gap-x-3">
                     <Github size={36}/>
@@ -27,7 +28,9 @@ export default function FooterSec(){
                     <h1 className="font-medium text-base text-zinc-500" >Ver proyectos en los que estoy trabajando actualmente</h1>
                 </CardBody>
             </Card>
+            </a>
 
+            <a href="https://www.linkedin.com/in/lv-dev/" target="_blank">
             <Card className="bg-opacity-50 w-[300px] h-full mt-14" isHoverable >
                 <CardHeader className="pb-0 flex items-end gap-x-3">
                     <Linkedin size={36} />
@@ -37,11 +40,13 @@ export default function FooterSec(){
                     </div>
                 </CardHeader>
                 <CardBody className="mt-2">
-                    <h1 className="font-medium text-base text-zinc-500" >Seguime en LinkedIn plataforma en la que estoy mas activo</h1>
+                    <h1 className="font-medium text-base text-zinc-500" >Sígueme en LinkedIn, la plataforma donde soy más activo</h1>
                 </CardBody>
             </Card>
+            </a>
 
             <Card className=" bg-opacity-50 w-[300px] h-full mt-14" isHoverable >
+                <a href="https://api.whatsapp.com/send?phone=3435174155&text=Hola Luciano!" target="_blank">
                 <CardHeader className="pb-0  flex items-end gap-x-3">
                     <AtSign size={36} />
                     <div className="flex justify-center items-center gap-x-2">
@@ -49,6 +54,7 @@ export default function FooterSec(){
                         <ExternalLink size={18} />
                     </div>
                 </CardHeader>
+                </a>
                 <CardBody className="flex flex-col ml-2">
                     <h1 className="font-medium text-base text-zinc-500" >luciano.vel166@gmail.com</h1>
                     <h1 className="font-medium text-base text-zinc-500 mt-1" >+54 3435174155</h1>

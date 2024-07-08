@@ -23,12 +23,13 @@ export default function Header() {
       isBlurred
       isBordered
       maxWidth="xl"
-      className=""
+      className="absolute"
     >
       <NavbarContent justify="start">
         
         <NavbarBrand>
-          <Image width={32} height={32} src={img} alt=""></Image>
+        <a href="#contactame"><Button variant="light" color="default" >Contactame</Button></a>
+        <Button variant="light" color="secondary" >Descargar CV</Button>
         </NavbarBrand>
 
         <NavbarMenu>
@@ -41,7 +42,7 @@ export default function Header() {
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <Link >Descargar CV</Link>
+        
         <ThemeSwitcher></ThemeSwitcher>
       </NavbarContent>
     </Navbar>

@@ -79,6 +79,8 @@ export default function Porfolio(){
             desc2={proyecto.desc2}
             tec={proyecto.tec}
             img={proyecto.img}
+            url={proyecto.url}
+            repo={proyecto.repo}
             ></CardPortafolio>
           )
         })

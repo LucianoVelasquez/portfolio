@@ -44,7 +44,7 @@ const handleColor = (name : any) => {
 
   
 
-export default function CardPortafolio({id,title,typo,desc,desc2,tec,img} : any){
+export default function CardPortafolio({id,title,typo,desc,desc2,tec,img,repo,url} : any){
 
     return(
         <div className="flex-col h-[650px] mt-40 mb-52 ">
@@ -79,8 +79,11 @@ export default function CardPortafolio({id,title,typo,desc,desc2,tec,img} : any)
                       }
                     </div>
                     <div className="absolute bottom-0 left-0 flex gap-x-5 mb-5">
-                        <Button variant="faded" color="default" className="bg-opacity-80" size="lg">Repositorio<Github size={20} /></Button>
-                        <Button variant="faded" color="default" size="lg">Demo <SquareArrowOutUpRight size={16} /></Button>
+                      {
+                        repo != "" ? <a href={repo} target="_blank"><Button variant="faded" color="default" className="bg-opacity-80" size="lg">Repositorio<Github size={20} /></Button></a> : ""
+                      }
+                        <a href={url} target="_blank">
+                        <Button variant="faded" color="default" size="lg">Demo <SquareArrowOutUpRight size={16} /></Button></a>
                     </div>
 
                 </div>
