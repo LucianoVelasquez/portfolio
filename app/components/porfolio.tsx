@@ -22,6 +22,29 @@ import CardPortafolio from "./cardPortafolio";
     },
     {
       id: 2,
+      title: "Proyecto Individual",
+      typo:"Full Stack - React & API Spring",
+      img: ["https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/884shots_so.png"],
+      desc: `Proyecto individual que consistió en crear una API REST con Spring Boot 3, implementando métodos de seguridad como Spring Security y JWT para proteger los diferentes endpoints.`,
+      desc2: `Además, se documentó toda la aplicación con Swagger UI. También se desarrolló un sistema de login utilizando React, permitiendo a los usuarios autenticarse para acceder a los endpoints protegidos, con deploy completo realizado en AWS.`,
+      tec: [
+        ["Java","https://www.svgrepo.com/show/452234/java.svg"],
+        ["Spring Boot","https://www.svgrepo.com/show/376350/spring.svg"],
+        ["PostgreSQL","https://www.svgrepo.com/show/354200/postgresql.svg"],
+        ["AWS","https://www.svgrepo.com/show/448266/aws.svg"],
+        ["Vite","https://www.svgrepo.com/show/374167/vite.svg"],
+        ["TypeScript","https://www.svgrepo.com/show/354478/typescript-icon.svg"],
+        ["Tailwind","https://www.svgrepo.com/show/374118/tailwind.svg"],
+        /* "https://www.svgrepo.com/show/374071/sequelize.svg",
+        "https://www.svgrepo.com/show/517750/mercado-pago.svg",
+        "https://www.svgrepo.com/show/373700/jest.svg",
+        "https://www.svgrepo.com/show/353435/auth0.svg", */
+      ],
+      url: "https://springboot-api-wfnm.onrender.com/swagger-ui/index.html",
+      repo: "https://github.com/LucianoVelasquez/springboot-API",
+    },
+    {
+      id: 3,
       title: "Proyecto en Grupo",
       typo:"Full Stack - Sportiverse",
       img: ["https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/1692279677725.jpg"],
@@ -44,24 +67,6 @@ import CardPortafolio from "./cardPortafolio";
       repo: "",
       viewTec: ["JavaScript","Vite","NodeJs","PostgreSQL","Tailwind"]
     },
-    {
-      id: 3,
-      title: "Proyecto Individual",
-      typo:"Front End - App R&M",
-      img: ["https://raw.githubusercontent.com/LucianoVelasquez/portfolio/main/src/utils/720shots_so.jpg"],
-      desc: `Proyecto en el que consiste desarrollar una aplicación web con React y Vite. `,
-      desc2: "Permite a los usuarios buscar y visualizar información sobre personajes de la serie Rick and Morty utilizando la Api https://rickandmortyapi.com/",
-      tec: [
-        ["React","https://www.svgrepo.com/show/354259/react.svg"],
-        ["Vite","https://www.svgrepo.com/show/374167/vite.svg"],
-        ["Redux","https://www.svgrepo.com/show/452093/redux.svg"],
-        ["Tailwind","https://www.svgrepo.com/show/374118/tailwind.svg"],
-        ["GraphQL","https://www.svgrepo.com/show/373644/graphql.svg"],
-      ],
-      url: "https://challange-rm.vercel.app/",
-      repo: "https://github.com/LucianoVelasquez/challange-rm",
-      viewTec: ["React","Vite","Redux","Tailwind","GraphQL"]
-    }
     ]
 
 export default function Porfolio(){
