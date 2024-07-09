@@ -5,7 +5,7 @@ import Content from './components/content';
 import Porfolio from './components/porfolio';
 import PorfolioSec2 from './components/porfoliosec2';
 import FooterSec from './components/footer';
-
+/* eslint-disable no-undef */
 export default function Home() {
   return (
       <div className='overflow-x-hidden'>

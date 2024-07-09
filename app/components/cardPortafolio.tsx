@@ -56,6 +56,18 @@ const handleColor = (name : any) => {
 
 export default function CardPortafolio({id,title,typo,desc,desc2,tec,img,repo,url} : any){
 
+    const [isMovil,setIsmovil] = useState<any>(0);
+
+    useEffect(()=>{
+
+        if (typeof window !== 'undefined') {
+            
+            setIsmovil(window.innerWidth);
+          }
+
+    },[])
+
+
     return(
         <div className="flex-col h-[650px] mt-40 mb-52 ">
 
@@ -75,7 +87,7 @@ export default function CardPortafolio({id,title,typo,desc,desc2,tec,img,repo,ur
                       {
                         tec.map((array : any) =>{
                             return (
-                                <Card className={`p-1.5 bg-opacity-40 shadow-sm ${handleColor(array[0])}`}>
+                                <Card key={array[0].charAt(0)} className={`p-1.5 bg-opacity-40 shadow-sm ${handleColor(array[0])}`}>
                                     <div className="flex gap-x-2 justify-center items-center">
                                     <Image
                                             alt="Breathing app icon"
@@ -91,14 +103,14 @@ export default function CardPortafolio({id,title,typo,desc,desc2,tec,img,repo,ur
                     </div>
                     <div className="sm:absolute sm:bottom-0 sm:left-0 flex justify-center gap-x-5 mt-8 sm:mt-0 sm:mb-5">
                       {
-                        repo != "" ? <a href={repo} target="_blank"><Button variant="faded" color="default" className="bg-opacity-80" size={window.innerWidth < 430? "md" : "lg"}>Repositorio<Github size={20} /></Button></a> : ""
+                        repo != "" ? <a href={repo} target="_blank"><Button variant="faded" color="default" className="bg-opacity-80" size={isMovil < 430? "md" : "lg"}>Repositorio<Github size={20} /></Button></a> : ""
                       }
                         <a href={url} target="_blank">
-                        <Button variant="faded" color="default" size={window.innerWidth < 430? "md" : "lg"}>Demo <SquareArrowOutUpRight size={16} /></Button></a>
+                        <Button variant="faded" color="default" size={isMovil < 430? "md" : "lg"}>Demo <SquareArrowOutUpRight size={16} /></Button></a>
                     </div>
 
                 </div>
-                <div className={`w-full sm:w-1/2 ${id%2 == 1? " sm:ml-5" : "mr-10"} `}>
+                <div className={`w-full sm:w-1/2 ${id%2 == 1? " sm:ml-5" : "mr-10 mt-5 sm:mt-0"} `}>
                     <Image src={img[0]}
                     className={`${id%2 == 1? "mr-3 mb-3 sm:ml-3 sm:mb-0 sm:mr-3" : "mb-3 sm:mb-0 mr-5"}`}
                     width={580}

@@ -77,6 +77,7 @@ export default function Porfolio(){
         cards2.map(proyecto => {
           return(
             <CardPortafolio
+            key={proyecto.id}
             id={proyecto.id} 
             title={proyecto.title} 
             typo={proyecto.typo} 

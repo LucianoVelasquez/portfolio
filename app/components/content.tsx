@@ -1,26 +1,22 @@
 'use client'
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 
 
 
 export default function Content() {
-    const textVariants = {
-        initial: {
-          x: -500,
-          opacity: 0,
-        },
-        animate: {
-          x: 0,
-          opacity: 1,
-          transition: {
-            duration: 1,
-            staggerChildren: 0.1,
-          },
-        },
-      };
+    
+    const [isMovil,setIsmovil] = useState<any>(0);
 
-      
+    useEffect(()=>{
+
+        if (typeof window !== 'undefined') {
+            
+            setIsmovil(window.innerWidth);
+          }
+
+    },[])
 
       const SilVariantsMovil : any = {
         initial: {
@@ -55,7 +51,7 @@ export default function Content() {
     <div className="flex-col text-center justify-center items-center mt-20 sm:mt-28 ">
         <h1 className="text-4xl sm:text-5xl font-semibold mb-5">Tecnologias que utilizo</h1>
         <motion.div
-            variants={window.innerWidth < 430? SilVariantsMovil : SilVariants}
+            variants={isMovil < 430? SilVariantsMovil : SilVariants}
             initial="initial"
             animate="animate"
             className=" absolute  mi_filter"
@@ -146,81 +142,3 @@ export default function Content() {
     </div>
   );
 }
-
-/* 
-    <ul className=" flex justify-center items-center select-none gap-x-4 sm:gap-x-7 ">
-                    <li className="">
-                    <img
-                        className="h-32 w-24 mr-2"
-                        src="https://www.svgrepo.com/show/452228/html-5.svg"
-                    ></img>
-                    </li>
-                    <li>
-                    <img
-                        className="h-32 w-24 mr-2"
-                        src="https://www.svgrepo.com/show/452185/css-3.svg"
-                    ></img>
-                    </li>
-                    <li>
-                    <img
-                        className="h-28 w-20 mr-5"
-                        src="https://www.svgrepo.com/show/354478/typescript-icon.svg"
-                    ></img>
-                    </li>
-                    <li>
-                    <img
-                        className="h-28 w-20 mr-5"
-                        src="https://www.svgrepo.com/show/452234/java.svg"
-                    ></img>
-                    </li>
-                    <li>
-                    <img
-                        className="h-32 w-24 mr-5"
-                        src="https://www.svgrepo.com/show/493719/react-javascript-js-framework-facebook.svg"
-                    ></img>
-                    </li>
-                    <li>
-                    <img
-                        className="h-32 w-24 mr-5"
-                        src="https://www.svgrepo.com/show/373929/node.svg"
-                    ></img>
-                    </li>
-                    <li>
-                    <img
-                        className="h-28 w-24 mr-5"
-                        src="https://www.svgrepo.com/show/374118/tailwind.svg"
-                    ></img>
-                    </li>
-                    <li>
-                    <img
-                        className="h-28 w-28 mr-5"
-                        src="https://www.svgrepo.com/show/354112/nextjs.svg "
-                    ></img>
-                    </li>
-                    <li>
-                    <img
-                        className="h-32 w-24 mr-5"
-                        src="https://www.svgrepo.com/show/452093/redux.svg"
-                    ></img>
-                    </li>
-                    <li>
-                    <img
-                        className="h-28 w-20 mr-5"
-                        src="https://www.svgrepo.com/show/354200/postgresql.svg"
-                    ></img>
-                    </li>
-                    <li>
-                    <img
-                        className="h-28 w-20 mr-5"
-                        src="https://www.svgrepo.com/show/376350/spring.svg"
-                    ></img>
-                    </li>
-                    <li>
-                    <img
-                        className="h-32 w-24 mr-5"
-                        src="https://www.svgrepo.com/show/376356/aws.svg"
-                    ></img>
-                    </li>
-                </ul>
-
-*/
